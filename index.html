@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+  body {font-family: Arial, Helvetica, sans-serif; margin:0;}
+
+  .container  {
+   max-width: 1620px
+  }
+  
+   .container2  {
+   max-width: 1280px;
+   height: auto;
+  }
+
+.gold{
+  background-color: #d4af37;
+}
+.background-right{
+  border-radius: 0px 10px 10px 0px;
+}
+.background-left{
+  border-radius: 10px 0 0 10px;
+}
+.silver{
+  background-color: #d0d2d1;
+}
+.bronze{
+  background-color: #cd7f32;
+}
+.last{
+  background-color: #818182;  
+}
+
+  .headerimage{
+   display: block;
+   margin: 0 auto;
+   position: relative;
+   height: 150px;
+  }
+
+  .imagemain{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   align-items: flex-start;
+   margin: 0px;
+   height: 40px;
+   overflow: hidden;
+  }
+
+  .imageitem{
+    display: inline-flex;
+   filter: grayscale(100%);
+   min-height: 210px;
+   height: 100%;
+   object-fit: cover;
+  }
+
+      .infobar {
+          background-color: #000;
+      }
+
+      .navbar {
+          width: 100%;
+          background-color: #d7c378;
+          margin-bottom: 5px;
+          height: 40px;
+      }
+
+  .navrow{
+    width:100%;
+   text-align: center;
+  }
+
+  .infoholder{
+   max-width: 800px;
+   display: block;
+   margin: 0 auto;
+   text-align: center;
+  }
+
+    .navholder{
+   display: block;
+   margin: 0 auto;
+   text-align: center;
+    width: 1080px;
+  }
+
+  .infoitem{
+   color: white;
+   font-size: 18px;
+   text-transform: uppercase;
+   text-align: center;
+   padding: 10px 0;
+  }
+
+  .infotitle{
+   color: rgba(255,255,255,.4);
+   font-size: 15px;
+   text-align: center;
+   display: block;
+  }
+
+  .tab.container  {
+   max-width: 900px;
+   margin-top: 5px;
+   margin-bottom: 5px;
+  }
+
+  .tab button {
+     margin: 0 auto;
+     background-color: inherit;
+     border: none;
+     outline: none;
+     cursor: pointer;
+     transition: 0.3s;
+     color: #060606;
+     text-align: center;     
+     font-size: 16px;
+   }
+
+  .tab button:hover {
+     color: black;
+     font-weight: bold;
+  }
+
+  .tab button.active {
+     color: black;
+     font-weight: bold;
+  }
+
+  .tabcontent {
+     display: flex;
+     padding: 25px 12px;
+     text-align: center;
+     padding-bottom: 0px;
+     width: 100%;
+  }
+      .displayflex {
+          display: flex !important;
+      }
+      .countrylist {
+          display: inline-block;
+          list-style: none;
+          width: 16%;
+          font-size: 18px;
+          vertical-align: top;
+      }
+
+.countrylist:hover .countryflag {
+  opacity: 0.3;
+}
+
+.middle {
+  transition: .2s ease;
+  opacity: 0;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+      .middle2 {
+          transition: .2s ease;
+          opacity: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          text-align: center;
+      }
+      .middle3 {
+          transition: .2s ease;
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          text-align: center;
+      }
+
+.countrylist:hover .middle {
+  opacity: 1;
+}
+
+      .groups {
+          display: flex;
+          list-style: none;
+          width: 100%;
+          font-size: 18px;
+          line-height: 30px;
+          margin-left: 30px;
+      }
+      .groups2 {
+          display: flex;
+          list-style: none;
+          width: 100%;
+          font-size: 18px;
+          line-height: 30px;
+          margin-left: 0px;
+          flex-wrap: wrap
+      }
+
+      .roundof8 {
+          display: flex;
+          list-style: none;
+          width: 100%;
+          font-size: 18px;
+          line-height: 30px;
+          margin-left: 80px;
+          flex-wrap: wrap
+      }
+
+.groups:hover .countryflag2 {
+  opacity: 0.1;
+}
+.groups:hover .middle2 {
+  opacity: 1;
+}
+
+  .countryflag{
+   width: 75%;
+   border:1px solid #021a40;
+  }
+
+      .countryflag2 {
+          max-width: 110px;
+          border: 1px solid #021a40;
+          margin-bottom: 15px;
+          margin-left: 10px;
+      }
+      .placeholderflag {
+          border: 1px solid #021a40;
+          margin-bottom: 15px;
+          margin-left: 10px;
+          height: 74px;
+          background-color: #e1e1e1;
+          border-radius: 3px;
+      }
+
+  .sectionheader{
+   font-size: 32px;
+   font-weight: bold;  
+  }
+      .sectionheader2 {
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 20px;
+          margin-top: 20px;
+          width: 50px;
+      }
+      .groupholder{
+          padding:0px 0px 0px 0px;
+      }
+      .sectionheader3 {
+          font-size: 16px;
+          font-weight: bold;
+      }
+      .vs {
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 20px;
+          margin-top: 20px;
+          margin-left:10px;
+      }
+.formatdesc{
+    font-size: 13px;
+}
+  .liststuff{
+   list-style-type: none;
+   padding-left: 0;
+   padding-top: 10px;
+   margin-bottom:10px;
+  }
+
+  .tab{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .padding-0{
+    padding-right:0;
+    padding-left:0;
+}
+
+.tabrules{
+  display: inline-block;
+  width: 100%;
+  max-width: 1080px;
+}
+
+
+.gameRules{
+  padding-top: 10px;
+}
+
+.eddie{  
+  position: relative;
+}
+
+.text2{
+  font-size: 16px;
+  line-height: 20px;
+}
+      .textgroups {
+          font-size: 14px;
+          line-height: 26px;
+      }
+
+.eventtable{
+  display: grid;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  width: 100%;
+  padding: 0px 0px 00px 0px;
+  grid-template-columns: 10% 18% 18% 11% 11% 21% 11%;
+  grid-template-areas: "r1 r2 r3 r4 r5 s2 r6";
+}
+
+.tableheader{
+  display: inline-block;
+  position: relative;
+  padding: 0px 0px 10px 0px;
+  float: left;
+}
+
+.tablerow{
+    border-radius: 10px 10px 10px 10px;
+    border:1px solid #555;
+    margin-bottom: -1px;
+    width: 100%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    float: left;
+    position: relative;
+    background-color: #f4f4f4;
+    display: grid;
+    grid-template-columns: 10% 18% 18% 11% 11% 21% 11%;
+    grid-template-areas: "r1 r2 r3 r4 r5 s2 r6";
+    text-align: center;
+}
+
+.r1 {
+    grid-area: r1;
+}
+
+.r2 {
+    grid-area: r2;
+}
+.r3 {
+    grid-area: r3;
+}
+
+.r4 {
+    grid-area: r4;
+}
+.r5 {
+    grid-area: r5;
+}
+
+.r6 {
+    grid-area: r6;
+}
+
+.s2{
+  grid-area: s2;
+}
+
+.tablesection{
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  padding-top:12px;
+  position: relative;
+  min-height: 1px;
+  float: left;
+  color: #222;
+}
+.pad{
+  padding-top:10px;
+  padding-bottom:10px;
+}
+.padup{
+  padding-top:20px;
+}
+
+.medalimage{
+ padding: 4px 4px 4px 4px;
+  height: 46px;
+  width: auto;
+ display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -12px;
+}
+.championrow{
+    background-color: #bbb;
+}
+
+.ScoringTable{
+  display: grid;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  width: 40%;
+  padding: 0px 0px 0px 0px;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-areas: "r1 r2 r3 r4 r5";
+}
+.BeerPongTable{
+  display: grid;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  width: 50%;
+  padding: 0px 0px 0px 0px;
+  grid-template-columns: calc(100%/6) calc(100%/6) calc(100%/6) calc(100%/6) calc(100%/6) calc(100%/6);
+  grid-template-areas: "r1 r2 r3 r4 r5 r6";
+}
+.scoringtablesection{
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  padding-top:5px;
+  padding-bottom:5px;
+  position: relative;
+  min-height: 1px;
+  float: left;
+  color: #222;
+}
+.scoringtablerow{
+    border-radius: 10px 10px 10px 10px;
+    border:1px solid #555;
+    margin-bottom: -1px;
+    width: 40%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    background-color: #f4f4f4;
+    display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-areas: "r1 r2 r3 r4 r5";
+    text-align: center;
+}
+
+.beerpongtablerow{
+    border-radius: 10px 10px 10px 10px;
+    border:1px solid #555;
+    margin-bottom: -1px;
+    width: 50%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    background-color: #f4f4f4;
+    display: grid;
+   grid-template-columns: calc(100%/6) calc(100%/6) calc(100%/6) calc(100%/6) calc(100%/6) calc(100%/6);
+   grid-template-areas: "r1 r2 r3 r4 r5 r6";
+    text-align: center;
+}
+
+.placementrow{
+  width:80%;
+  margin-left:auto;
+  margin-right:auto;
+  padding-bottom: 20px;
+}
+
+.PlacementTable{
+  display: grid;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  width: 40%;
+  padding: 0px 0px 0px 0px;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "r1 r2";
+}
+
+.placementtablesection{
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  padding-top:8px;
+  padding-bottom:8px;
+  position: relative;
+  min-height: 1px;
+  float: left;
+  color: #222;
+}
+.floatleft{
+    float:left;
+}
+.placementtablerow{
+    border-radius: 10px 10px 10px 10px;
+    border:1px solid #555;
+    margin-bottom: -1px;
+    width: 40%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    background-color: #f4f4f4;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: "r1 r2";
+    text-align: center;
+}
+
+.scheduletable{
+  border-radius: 10px 10px 10px 10px;
+    border:1px solid #555;
+    margin-bottom: -1px;
+    width: 30%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    position: relative;
+    background-color: #f4f4f4;
+    display: grid;
+    text-align: center;
+}
+
+.othertable{
+  border-radius: 10px 10px 10px 10px;
+    border:1px solid #555;
+    margin-bottom: -1px;
+    width: 65%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    background-color: #f4f4f4;
+    display: grid;
+    text-align: center;
+}
+.note{
+  border-radius: 10px 10px 10px 10px;
+    border:1px solid #555;
+    margin-bottom: 10px;
+    padding-top:10px;
+    width: 40%;
+    height: 48px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    background-color: #f4f4f4;
+    display: grid;
+    text-align: center;
+}
+      .signup {
+          border-radius: 10px 10px 10px 10px;
+          border: 1px solid #d7c378;
+          margin-bottom: 10px;
+          padding-top: 10px;
+          width: 40%;
+          height: 48px;
+          margin-right: auto;
+          margin-left: auto;
+          position: relative;
+          background-color: #fff;
+          display: grid;
+          text-align: center;
+      }
+.schedulenote{
+  width:30%;
+  height: auto;
+  padding-bottom:10px;
+  padding-left:10px;
+  padding-right:10px
+}
+
+#daysleft{
+  padding: 0px 0px 0px 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+.eddie:hover .text{
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+.lightboximg{
+  height: 550px;
+  border-radius: 20px;
+    width: 550px;
+    object-fit: cover;
+padding: 0;
+margin: 0;
+text-align: center;
+}
+a.lightbox img {
+height: 150px;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+margin: 94px 20px 20px 20px;
+}
+
+.lightbox-target {
+position: fixed;
+top: -100%;
+width: 100%;
+background: rgba(0,0,0,.7);
+width: 100%;
+opacity: 0;
+left:0;
+-webkit-transition: opacity .5s ease-in-out;
+-moz-transition: opacity .5s ease-in-out;
+-o-transition: opacity .5s ease-in-out;
+transition: opacity .5s ease-in-out;
+overflow: hidden;
+}
+
+.lightbox-target img {
+margin: auto;
+position: absolute;
+top: 0;
+left:0;
+right:0;
+bottom: 0;
+max-height: 0%;
+max-width: 0%;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+box-sizing: border-box;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+  
+}
+
+/* Styles the close link, adds the slide down transition */
+
+a.lightbox-close {
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:before {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+transform:rotate(45deg);
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:after {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(-45deg);
+-moz-transform:rotate(-45deg);
+-o-transform:rotate(-45deg);
+transform:rotate(-45deg);
+}
+
+/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+
+.lightbox-target:target {
+opacity: 1;
+top: 0;
+bottom: 0;
+overflow:none;
+}
+
+.lightbox-target:target img {
+max-height: 100%;
+max-width: 100%;
+}
+
+.lightbox-target:target a.lightbox-close {
+top: 0;
+}
+
+
+</style>
+
+<title>Jer's Summer Challenge</title>
+</head>
+<body>
+    <div class="headerbar">
+        <div class="infobar">
+            <div class="infoholder container">
+                <div class="row">
+                    <div class="infoitem col-sm-3">
+                        <strong class="infotitle">Next Event</strong> March Madness
+                    </div>
+                    <div class="infoitem col-sm-3">
+                        <strong class="infotitle">DATE</strong> Due Mar 20
+                    </div>
+                    <div class="infoitem col-sm-3">
+                        <strong class="infotitle">LOCATION</strong> CBS
+                    </div>
+                    <div class="infoitem col-sm-3">
+                        <strong class="infotitle">COUNTDOWN</strong> <p id="daysleft"></p>
+                        <script>
+                            var d = new Date();
+                            var b = new Date('03/20/2024');
+                            document.getElementById("daysleft").innerHTML = Math.ceil((b - d) / (1000 * 60 * 60 * 24)) + " days";
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab headerbar navbar">
+            <div class="navholder container">
+                <div class="row navrow ">
+                    <button class="tablinks col-sm-2" id="defaultOpen" onclick="openSection(event, 'Countries')">Teams</button>
+                    <button class="tablinks col-sm-2" onclick="openSection(event, 'Format')">Leaderboard</button>
+                    <button class="tablinks col-sm-2" onclick="openSection(event, 'Schedule')">Info</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabcontent container" id="Countries">
+            <div class="row text-center"><p class="note schedulenote">The first event is March Madness Brackets!<a class="signup" href="https://picks.cbssports.com/college-basketball/ncaa-tournament/bracket/pools/kbxw63b2geydkobugq2tc===?pool-join-key=mhiistnoxgburrh5eidct0hlttr2kvdy&invited-by=ivxhi4tzhiytkobtgi3dembs&via-medium=copy&ttag=FF24_lk_cbssports_cbb_bpm_copySetupInvite"> Sign up Here</a> Use your real name with your team name in parenthesis, ex: "Jer (West)". Venmo @jeremy-manweller $10, winner takes all.</p>
+                <div class="padup">
+                    <div class="col-sm-2 countrylist">
+                        <div class="eddie">
+                            <img class="countryflag" src="Images/NorthFlag.png" title="North">
+                            <div class="middle">
+                                <div class="text">North</div>
+                            </div>
+                        </div>
+                        <ul class="liststuff">
+                            <li>Kyle</li>
+                            <li>Ari</li>
+                            <li>Phil</li>
+                            <li>Alexa</li>
+                            <li>Dan</li>
+                            <li>Jen</li>
+                            <li>Daniel</li>
+                            <li>Salaar</li>
+                            <li>Amy</li>
+                            <li>Diane</li>
+                            <li>Derek</li>
+                            <li>Chris</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2 countrylist">
+                        <div class="eddie">
+                            <img class="countryflag" src="Images/SouthFlag.png" title="South">
+                            <div class="middle">
+                                <div class="text">South</div>
+                            </div>
+                        </div>
+                        <ul class="liststuff">
+                            <li>Bard</li>
+                            <li>Chelsea</li>
+                            <li>Dozz</li>
+                            <li>Nack</li>
+                            <li>Lauren</li>
+                            <li>Evan</li>
+                            <li>Nicole</li>
+                            <li>Clay</li>
+                            <li>Ev</li>
+                            <li>Kambiz</li>
+                            <li>Matt</li>
+                            <li>James</li>
+                            <li>Tyler</li>
+                            <li>Dalo</li>
+                            <li>Aya</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2 countrylist">
+                        <div class="eddie">
+                            <img class="countryflag" src="Images/EastFlag.png" title="East">
+                            <div class="middle">
+                                <div class="text">East</div>
+                            </div>
+                        </div>
+                        <ul class="liststuff">
+                            <li>Sru</li>
+                            <li>Krishna</li>
+                            <li>Sreeja</li>
+                            <li>Britt</li>
+                            <li>Wyatt</li>
+                            <li>Cristina</li>
+                            <li>Sam</li>
+                            <li>Yukiko</li>
+                            <li>Zach</li>
+                            <li>Eddie</li>
+                            <li>Kayla</li>
+                            <li>Rob</li>
+                            <li>Travis</li>
+                            <li>Danny</li>
+                            <li>Georgie</li>
+                            <li>Camryn</li>
+                            <li>Tyler</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2 countrylist">
+                        <div class="eddie">
+                            <img class="countryflag" src="Images/WestFlag.png" title="West">
+                            <div class="middle">
+                                <div class="text">West</div>
+                            </div>
+                        </div>
+                        <ul class="liststuff">
+                            <li>Jer</li>
+                            <li>Gaivalee</li>
+                            <li>Omid</li>
+                            <li>Elisabeth</li>
+                            <li>Alex</li>
+                            <li>Daisy</li>
+                            <li>Eric</li>
+                            <li>Cheryl</li>
+                            <li>Chance</li>
+                            <li>Nathalie</li>
+                            <li>Sean</li>
+                            <li>Jen</li>
+                            <li>Kylee</li>
+                            <li>Avalon</li>
+                            <li>Uly</li>
+                            <li>Nik</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2 countrylist">
+                        <div class="eddie">
+                            <img class="countryflag" src="Images/RingFlag.png" title="Ring">
+                            <div class="middle">
+                                <div class="text">Ring</div>
+                            </div>
+                        </div>
+                        <ul class="liststuff">
+                            <li>Jonathan</li>
+                            <li>Celeste</li>
+                            <li>Kris</li>
+                            <li>Lexa</li>
+                            <li>Jeremy</li>
+                            <li>Serg</li>
+                            <li>Brent</li>
+                            <li>Precious</li>
+                            <li>Max</li>
+                            <li>Adam</li>
+                            <li>Bobby</li>
+                            <li>John </li>
+                            <li>Chris</li>
+                            <li>Nick</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabcontent  container" id="Format">
+            <div class="displayflex">
+                    <p class="sectionheader3">Work In Progress</p>
+            </div>
+        </div>
+
+        <div class="tabcontent container" id="Schedule">
+            <p class="note schedulenote">Welcome to Jer's Great Summer Challenge!</p>
+            <p class="note schedulenote">You have been split into teams based mostly on how I know you, and we will compete all summer long to determine the best team. Unlike events in the past the team sizes are flexible and not everyone needs to play in every event, but the more members that join the higher your team's chances of scoring points will be. So play in the ones that interest you or all of them if you have the time, they will include everything from March Madness brackets to beer pong, trivia nights to mystery challenges. If anyone's missing from the list or if you want to add people in just let me know!</p>
+            <p class="note schedulenote padup">Each event will have it's own rules and entry fee if applicable. For team events you should play with a team member whenever possible but it's ok to play cross teams if you need to, your points just won't count towards the greater challenge. Many events will be online, and many of them will be top secret until they are announced, don't bother asking :)</p>
+            <p class="note schedulenote">I (Jer) will only compete in events where it makes sense, for example if I'm hosting trivia or mystery events I won't be playing in them, but I will for events like beer pong and March Madness.</p>
+            <p class="note schedulenote">The first event is March Madness Brackets!<a class="signup" href="https://picks.cbssports.com/college-basketball/ncaa-tournament/bracket/pools/kbxw63b2geydkobugq2tc===?pool-join-key=mhiistnoxgburrh5eidct0hlttr2kvdy&invited-by=ivxhi4tzhiytkobtgi3dembs&via-medium=copy&ttag=FF24_lk_cbssports_cbb_bpm_copySetupInvite"> Sign up Here</a> Use your real name with your team name in parenthesis, ex: "Jer (West)". Venmo @jeremy-manweller $10, winner takes all.</p>
+        </div>
+        </div>
+        <script>
+            function openSection(evt, tabName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(tabName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+            document.getElementById("defaultOpen").click();
+        </script>
+
+</body>
+</html>
