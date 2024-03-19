@@ -3,10 +3,21 @@
 <head>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet">
   <style>
-  body {font-family: Arial, Helvetica, sans-serif; margin:0;}
-
+  body {font-family: Olympic Sans, Helvetica, sans-serif; margin:0;}
+      @font-face {
+          font-family: Olympic Sans;
+          src: url("../../Fonts/OlympicSans.ttf") format('truetype');
+          font-weight: normal;
+          font-style: normal;
+      }
+      @font-face {
+          font-family: Paris2024-Variable;
+          src: url("../../Fonts/Paris2024-Variable.ttf") format('truetype');
+          font-weight: normal;
+          font-style: normal;
+      }
   .container  {
-   max-width: 1620px
+   max-width: 1620px;
   }
   
    .container2  {
@@ -96,12 +107,12 @@
    padding: 10px 0;
   }
 
-  .infotitle{
-   color: rgba(255,255,255,.4);
-   font-size: 15px;
-   text-align: center;
-   display: block;
-  }
+      .infotitle {
+          color: #8a8a8a;
+          font-size: 15px;
+          text-align: center;
+          display: block;
+      }
 
   .tab.container  {
    max-width: 900px;
@@ -133,7 +144,7 @@
 
   .tabcontent {
      display: flex;
-     padding: 25px 12px;
+     padding: 0px 12px;
      text-align: center;
      padding-bottom: 0px;
      width: 100%;
@@ -559,10 +570,10 @@
 }
       .signup {
           border-radius: 10px 10px 10px 10px;
-          border: 1px solid #d7c378;
+          border: 2px solid #d7c378;
           margin-bottom: 10px;
           padding-top: 10px;
-          width: 40%;
+          width: 400px;
           height: 48px;
           margin-right: auto;
           margin-left: auto;
@@ -570,6 +581,7 @@
           background-color: #fff;
           display: grid;
           text-align: center;
+          font-weight: bold;
       }
 .schedulenote{
   width:60%;
@@ -702,6 +714,19 @@ max-width: 100%;
 top: 0;
 }
 
+      .pagetitle {
+          text-align: center;
+          font-family: Paris2024-Variable;
+          font-size: 32px;
+          background-position-x: center;
+      }
+      .sectiontitle {
+          text-align: center;
+          font-family: Paris2024-Variable;
+          font-size: 20px;
+          background-position-x: center;
+          margin-bottom:0px;
+      }
 
 </style>
 
@@ -743,8 +768,13 @@ top: 0;
         </div>
 
         <div class="tabcontent container" id="Countries">
-            <div class="row text-center"><p class="note schedulenote">The first event is March Madness Brackets!<a class="signup" href="https://picks.cbssports.com/college-basketball/ncaa-tournament/bracket/pools/kbxw63b2geydkobugq2tc===?pool-join-key=mhiistnoxgburrh5eidct0hlttr2kvdy&invited-by=ivxhi4tzhiytkobtgi3dembs&via-medium=copy&ttag=FF24_lk_cbssports_cbb_bpm_copySetupInvite"> Sign up Here</a> Use your real name with your team name in parenthesis ex: "Jer (West)" and Venmo @jeremy-manweller $10. winner takes all!</p>
-                <div class="padup">
+            <div class="pagetitle">Current Event</div>
+            <div class="text-center sectionbackground">
+                <p class="">The first event is March Madness Brackets!<a class="signup" href="https://picks.cbssports.com/college-basketball/ncaa-tournament/bracket/pools/kbxw63b2geydkobugq2tc===?pool-join-key=mhiistnoxgburrh5eidct0hlttr2kvdy&invited-by=ivxhi4tzhiytkobtgi3dembs&via-medium=copy&ttag=FF24_lk_cbssports_cbb_bpm_copySetupInvite"> Sign up Here</a> Complete your bracket and Venmo @jeremy-manweller $10 to partake in the money pool. winner takes all!<br />Alternatively complete your bracket without venmo and your points will still count for your team!</p>
+            </div>
+            <div class="">
+                <div class="pagetitle">Teams</div>
+                <div class="text-center sectionbackground">
                     <div class="col-sm-2 countrylist">
                         <div class="eddie">
                             <img class="countryflag" src="Images/NorthFlag.png" title="North">
@@ -889,12 +919,16 @@ top: 0;
         </div>
 
         <div class="tabcontent container" id="Schedule">
-            <p class="note schedulenote">Welcome to Jer's Great Summer Challenge!</p>
-            <p class="note schedulenote">You have been split into teams based mostly on how I know you, and we will compete all summer long to determine the best team. Unlike events in the past the team sizes are flexible and not everyone needs to play in every event, but the more members that join the higher your team's chances of scoring points will be. So play in the ones that interest you or all of them if you have the time, they will include everything from March Madness brackets to beer pong, trivia nights to mystery challenges. If anyone's missing from the list or if you want to add people in just let me know!</p>
-            <p class="note schedulenote padup">Each event will have it's own rules and entry fee if applicable. For team events you should play with a team member whenever possible but it's ok to play cross teams if you need to, your points just won't count towards the greater challenge. Many events will be online, and many of them will be top secret until they are announced, don't bother asking :)</p>
-            <p class="note schedulenote">I (Jer) will only compete in events where it makes sense, for example if I'm hosting trivia or mystery events I won't be playing in them, but I will for events like beer pong and March Madness.</p>
-            <p class="note schedulenote">The first event is March Madness Brackets!<a class="signup" href="https://picks.cbssports.com/college-basketball/ncaa-tournament/bracket/pools/kbxw63b2geydkobugq2tc===?pool-join-key=mhiistnoxgburrh5eidct0hlttr2kvdy&invited-by=ivxhi4tzhiytkobtgi3dembs&via-medium=copy&ttag=FF24_lk_cbssports_cbb_bpm_copySetupInvite"> Sign up Here</a> Use your real name with your team name in parenthesis ex: "Jer (West)" and Venmo @jeremy-manweller $10, winner takes all!</p>
+            <p class="pagetitle">Welcome to Jer's Great Summer Challenge!</p>
+            <p class="sectiontitle">Teams</p>
+            <p class="note schedulenote">You have been split into teams based mostly on how I know you, and we will compete all summer long to determine the best team. Team sizes are generally flexible and not everyone needs to play in every event, but the more members that join the higher your team's chances of scoring points will be.</p>
+            <p class="sectiontitle">Events</p>
+            <p class="note schedulenote padup">Each event will have it's own rules and entry fee if applicable. They will include everything from online challenges like March Madness brackets to beer pong, trivia nights and more. For team events you should play with a team member whenever possible but it's ok to play cross teams if you need to, your points just won't count in full towards the greater challenge.</p>
+            <p class="sectiontitle">Captains</p>
             <p class="note schedulenote">The first two players on each team are designated captains. There aren't any real roles involved, just drive participation in the events for your teams!</p>
+            <p class="sectiontitle">Me</p>
+            <p class="note schedulenote">I (Jer) will only compete in events where it makes sense, for example if I'm hosting trivia or mystery events I won't be playing in them, but I will for events like beer pong and March Madness.</p>
+
         </div>
         </div>
         <script>
