@@ -1048,20 +1048,17 @@
                     }
                 });
 
+            $.document.getElementById("TeamScoreboard").firstrow.replaceWith(function () {
+                return $("<" + thead + "/>", attrs).append($(this).contents());
+            });
 
+            $('.sortable').sortable({
+                
+            });
 
         }
     </script>
-    <script>
-        $(document).ready(function () {
-            $.document.getElementById("TeamScoreboard").firstrow.replaceWith(function () {
-                return $("<" + thead + "/>", attrs).append($(this).contents());
 
-                $('.sortable').sortable({
-                });
-            });
-        });
-    </script>
     <script>
         //tab switching
         function openSection(evt, tabName) {
