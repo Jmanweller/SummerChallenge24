@@ -1034,24 +1034,26 @@
                     let rows = csv.split("/r/n");
 
                     //loop through rows and split columns
+                    var tablerownumber = 1;
                     for (let row of rows) {
                         let cols = row.match(/(?:\"([^\"]*(?:\"\"[^\"]*)*)\")|([^\",]+)/g);
                         if (cols != null) {
                             for (let row of CSV.parse(csv)) {
                                 let tr = playertable.insertRow();
                                 for (let col of row) {
-                                    let td = tr.insertCell();
+                                    if (tablerownumber == 1) {
+                                        let thead = tr.insertCell();
+                                        tablerownumber -= 1;
+                                    }
+                                    else {
+                                        let td = tr.insertCell();
+                                    }
                                     td.innerHTML = col;
                                 }
                             }
                         }
                     }
                 });
-
-            $.document.getElementById("TeamScoreboard").firstrow.replaceWith(function () {
-                return $("<" + thead + "/>", attrs).append($(this).contents());
-            });
-
             $('.sortable').sortable({
                 
             });
