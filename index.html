@@ -966,6 +966,7 @@
 
             <p class="pagetitle">Team Leaderboard</p>
             <table class="scoreboardtables" id="TeamScoreboard"></table>
+
             <p class="pagetitle">Player Leaderboard</p>
             <table class="scoreboardtables" id="PlayerScoreboard"></table>
 
@@ -1015,10 +1016,12 @@
                         }
                     }
                 });
-
+                </script>
+    <script>
+            window.onload = () => {
                 //playertable
             var playertable = document.getElementById("PlayerScoreboard");
-
+            
             fetch("PlayerScoreboard.csv")
                 .then(res => res.text())
                 .then(csv => {
