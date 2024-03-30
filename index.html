@@ -357,7 +357,10 @@
             grid-template-areas: "r1 r2 r3 r4 r5 s2 r6";
             width: fit-content;
         }
-        #TeamScoreboard tr {
+        .scoreboardtables {
+            width: fit-content;
+        }
+        .scoreboardtables tr {
             border-radius: 10px 10px 10px 10px;
             border: 1px solid #555;
             margin-bottom: -1px;
@@ -369,22 +372,7 @@
             background-color: #f3f3f3;
             text-align: center;
         }
-        tr:first-child td:nth-child(2) {
-            border-top-left-radius: 10px;
-        }
-
-        tr:first-child td:last-child {
-            border-top-right-radius: 10px;
-        }
-
-        tr:last-child td:nth-child(2) {
-            border-bottom-left-radius: 10px;
-        }
-
-        tr:last-child td:last-child {
-            border-bottom-right-radius: 10px;
-        }
-            #TeamScoreboard tr:first-child {
+            .scoreboardtables tr:first-child {
                 text-align: center;
                 font-family: Paris2024-Variable;
                 font-size: 15px;
@@ -393,14 +381,14 @@
                 font-weight: bold;
                 align-content: end;
                 border: none;
-                background-color:#fff;
+                background-color: #fff;
             }
-            #TeamScoreboard tr>last-child {
+            .scoreboardtables tr > last-child {
                 background-color: #c9c9c9;
                 border-radius: 0px 10px 10px 0px;
             }
 
-        #TeamScoreboard td{
+        .scoreboardtables td {
             padding: 2px 4px 2px 4px;
         }
 
@@ -976,7 +964,7 @@
             <!-- (B) GENERATE HTML TABLE HERE -->
 
             <p class="pagetitle">Leaderboards</p>
-            <table id="TeamScoreboard"></table>
+            <table class="scoreboardtables" id="TeamScoreboard"></table>
             <div class="container-fluid col-lg-12 eventtable">
                 <div class="r1 tableheader">
                     Team
