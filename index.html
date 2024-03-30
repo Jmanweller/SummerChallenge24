@@ -1018,6 +1018,34 @@
                     }
                 });
 
+            //playertable
+            var playertable = document.getElementById("PlayerScoreboard");
+
+            fetch("PlayerScoreboard.csv")
+                .then(res => res.text())
+                .then(csv => {
+                    console.log(csv);
+                    //clear table
+                    playertable.innerHTML = "";
+
+                    //split rows
+                    let rows = csv.split("/r/n");
+
+                    //loop through rows and split columns
+                    for (let row of rows) {
+                        let cols = row.match(/(?:\"([^\"]*(?:\"\"[^\"]*)*)\")|([^\",]+)/g);
+                        if (cols != null) {
+                            for (let row of CSV.parse(csv)) {
+                                let tr = playertable.insertRow();
+                                for (let col of row) {
+                                    let td = tr.insertCell();
+                                    td.innerHTML = col;
+                                }
+                            }
+                        }
+                    }
+                });
+
 
 
         }
