@@ -1009,16 +1009,10 @@
                     for (let row of rows) {
                         let cols = row.match(/(?:\"([^\"]*(?:\"\"[^\"]*)*)\")|([^\",]+)/g);
                         if (cols != null) {
-                            var teamtablefirstrow = 1;
                             for (let row of CSV.parse(csv)) {
-                                if (teamtablefirstrow = 1) {
-                                    let thead = teamtable.insertRow();
-                                    teamtablefirstrow = 0;
-                                }
-                                else {
-                                    let tr = teamtable.insertRow(); }
+                                let tr = teamtable.insertRow();
                                 for (let col of row) {
-                                    let td = tr.insertCell();                                    
+                                    let td = tr.insertCell();
                                     td.innerHTML = col;
                                 }
                             }
@@ -1059,11 +1053,11 @@
         }
     </script>
     <script>
-        $(document).ready(function () {
-            $('.sortable').sortable({
-            });
+    $(document).ready(function () {
+        $('#tableid').sortable({
         });
-    </script>
+    });
+</script>
     <script>
         //tab switching
         function openSection(evt, tabName) {
@@ -1082,6 +1076,6 @@
         document.getElementById("defaultOpen").click();
     </script>
 
-
+    
 </body>
 </html>
