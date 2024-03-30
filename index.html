@@ -369,6 +369,21 @@
             background-color: #f3f3f3;
             text-align: center;
         }
+        tr:first-child td:nth-child(2) {
+            border-top-left-radius: 10px;
+        }
+
+        tr:first-child td:last-child {
+            border-top-right-radius: 10px;
+        }
+
+        tr:last-child td:nth-child(2) {
+            border-bottom-left-radius: 10px;
+        }
+
+        tr:last-child td:last-child {
+            border-bottom-right-radius: 10px;
+        }
             #TeamScoreboard tr:first-child {
                 text-align: center;
                 font-family: Paris2024-Variable;
@@ -380,10 +395,10 @@
                 border: none;
                 background-color:none;
             }
-        #TeamScoreboard tr:last-child {
-            background-color: #bbb;
-            border-radius: 0px 10px 10px 0px;
-        }
+            #TeamScoreboard tr > last-child {
+                background-color: #c9c9c9;
+                border-radius: 0px 10px 10px 0px;
+            }
 
         #TeamScoreboard td{
             padding: 2px 4px 2px 4px;
