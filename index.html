@@ -1011,7 +1011,6 @@
                                 let tr = teamtable.insertRow();
                                 for (let col of row) {
                                     let td = tr.insertCell();
-                                    td.innerHTML = col;
                                     td.innerHTML = col.replace(/(^"|"$)/g, "");
                                 }
                             }                            
