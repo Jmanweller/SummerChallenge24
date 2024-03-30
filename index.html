@@ -1007,7 +1007,7 @@
                     for (let row of rows) {
                         let cols = row.match(/(?:\"([^\"]*(?:\"\"[^\"]*)*)\")|([^\",]+)/g);
                         if (cols != null) {
-                            let tr = table.insertRow();
+                            let tr = teamtable.insertRow();
                             for (let col of cols) {
                                 let td = tr.insertCell();
                                 td.innerHTML = col.replace(/(^"|"$)/g, "");
@@ -1033,7 +1033,7 @@
                     for (let row of rows) {
                         let cols = row.match(/(?:\"([^\"]*(?:\"\"[^\"]*)*)\")|([^\",]+)/g);
                         if (cols != null) {
-                            let tr = table.insertRow();
+                            let tr = playertable.insertRow();
                             for (let col of cols) {
                                 let td = tr.insertCell();
                                 td.innerHTML = col.replace(/(^"|"$)/g, "");
@@ -1043,11 +1043,6 @@
                 });
 
         }
-    </script>
-    <script>
-            window.onload = () => {
-                
-            }
     </script>
     <script>
         //tab switching
