@@ -964,12 +964,13 @@
 
 
             <!-- (B) GENERATE HTML TABLE HERE -->
+            <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
 
             <div class="pagetitle">Team Leaderboard</div>
-            <table class="scoreboardtables" id="TeamScoreboard"></table>
+            <table class="scoreboardtables sortable" id="TeamScoreboard"></table>
 
             <div class="pagetitle">Player Leaderboard</div>
-            <table class="scoreboardtables" id="PlayerScoreboard"></table>
+            <table class="scoreboardtables sortable" id="PlayerScoreboard"></table>
 
 
         </div>
@@ -1014,7 +1015,7 @@
                                     let td = tr.insertCell();
                                     td.innerHTML = col;
                                 }
-                            }                            
+                            }
                         }
                     }
                 });
@@ -1069,5 +1070,6 @@
         document.getElementById("defaultOpen").click();
     </script>
 
+    
 </body>
 </html>
