@@ -1034,27 +1034,38 @@
                     let rows = csv.split("/r/n");
 
                     //loop through rows and split columns
-                    var tablerownumber = 1;
                     for (let row of rows) {
                         let cols = row.match(/(?:\"([^\"]*(?:\"\"[^\"]*)*)\")|([^\",]+)/g);
                         if (cols != null) {
                             for (let row of CSV.parse(csv)) {
-                                let tr = playertable.insertRow();
-                                for (let col of row) {
-                                    if (tablerownumber == 1) {
+                                var tablerow = 1;
+                                if (tablerow == 1) {
+                                    tablerow = 0;
+                                    let thead = playertable.insertRow();
+                                    for (let col of row) {
                                         let thead = tr.insertCell();
-                                        tablerownumber -= 1;
-                                    }
-                                    else {
-                                        let td = tr.insertCell();
-                                    }
+                                        td.innerHTML = col;                                    }
+
+                                }
+                                else {
+                                    let tr = playertable.insertRow();
+                                    for (let col of row) {
+                                    let td = tr.insertCell();
                                     td.innerHTML = col;
+                                    }
                                 }
                             }
                         }
                     }
                 });
-            $('.sortable').sortable({
+
+            $.document.getElementById("TeamScoreboard").firstrow.replaceWith(function () {
+                return $("<" + thead + "/>", attrs).append($(this).contents());
+            });
+
+
+
+            $.document.getElementsByClassName('.sortable').sortable({
                 
             });
 
