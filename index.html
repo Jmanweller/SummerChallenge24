@@ -1038,8 +1038,8 @@
                     for (let row of rows) {
                         let cols = row.match(/(?:\"([^\"]*(?:\"\"[^\"]*)*)\")|([^\",]+)/g);
                         if (cols != null) {
+                            var tablerow = 1;
                             for (let row of CSV.parse(csv)) {
-                                var tablerow = 1;
                                 if (tablerow == 1) {
                                     tablerow = 0;
                                     let thead = playertable.insertRow();
