@@ -990,9 +990,8 @@
     <script src="csvtotable.js"></script>
     <script>
         window.onload = () => {
+            //teamtable
             var teamtable = document.getElementById("TeamScoreboard");
-
-
 
             fetch("TeamScoreboard.csv")
                 .then(res => res.text())
@@ -1016,36 +1015,38 @@
                         }
                     }
                 });
+
+                //playertable
+            var playertable = document.getElementById("PlayerScoreboard");
+
+            fetch("PlayerScoreboard.csv")
+                .then(res => res.text())
+                .then(csv => {
+                    console.log(csv);
+                    //clear table
+                    playertable.innerHTML = "";
+
+                    //split rows
+                    let rows = csv.split("/r/n");
+
+                    //loop through rows and split columns
+                    for (let row of rows) {
+                        let cols = row.match(/(?:\"([^\"]*(?:\"\"[^\"]*)*)\")|([^\",]+)/g);
+                        if (cols != null) {
+                            let tr = table.insertRow();
+                            for (let col of cols) {
+                                let td = tr.insertCell();
+                                td.innerHTML = col.replace(/(^"|"$)/g, "");
+                            }
+                        }
+                    }
+                });
+
         }
     </script>
     <script>
             window.onload = () => {
-                var teamtable = document.getElementById("PlayerScoreboard");
-
-
-
-                fetch("PlayerScoreboard.csv")
-                    .then(res => res.text())
-                    .then(csv => {
-                        console.log(csv);
-                        //clear table
-                        teamtable.innerHTML = "";
-
-                        //split rows
-                        let rows = csv.split("/r/n");
-
-                        //loop through rows and split columns
-                        for (let row of rows) {
-                            let cols = row.match(/(?:\"([^\"]*(?:\"\"[^\"]*)*)\")|([^\",]+)/g);
-                            if (cols != null) {
-                                let tr = table.insertRow();
-                                for (let col of cols) {
-                                    let td = tr.insertCell();
-                                    td.innerHTML = col.replace(/(^"|"$)/g, "");
-                                }
-                            }
-                        }
-                    });
+                
             }
     </script>
     <script>
