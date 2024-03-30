@@ -4,7 +4,7 @@ let table = document.getElementById("TeamScoreboard");
 
 // (B) AJAX FETCH CSV FILE
 window.addEventListener("load", () => {
-    fetch("Scoreboard.csv")
+    fetch("TeamScoreboard.csv")
     .then(res => res.text())
     .then(csv => {
         table.innerHTML = "";
