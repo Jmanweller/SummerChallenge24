@@ -1012,13 +1012,9 @@
                                 for (let col of row) {
                                     let td = tr.insertCell();
                                     td.innerHTML = col;
+                                    td.innerHTML = col.replace(/(^"|"$)/g, "");
                                 }
-                            }
-                            let tr = teamtable.insertRow();
-                            for (let col of cols) {
-                                let td = tr.insertCell();
-                                td.innerHTML = col.replace(/(^"|"$)/g, "");
-                            }
+                            }                            
                         }
                     }
                 });
@@ -1044,13 +1040,9 @@
                                 let tr = teamtable.insertRow();
                                 for (let col of row) {
                                     let td = tr.insertCell();
+                                    td.innerHTML = col.replace(/(^"|"$)/g, "");
                                     td.innerHTML = col;
                                 }
-                            }
-                            let tr = playertable.insertRow();
-                            for (let col of cols) {
-                                let td = tr.insertCell();
-                                td.innerHTML = col.replace(/(^"|"$)/g, "");
                             }
                         }
                     }
