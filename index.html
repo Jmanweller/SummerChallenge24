@@ -964,10 +964,9 @@
 
             <!-- (B) GENERATE HTML TABLE HERE -->
 
-            <p class="pagetitle">Leaderboards</p>
-            <p class="sectiontitle">Team</p>
+            <p class="pagetitle">Team Leaderboard</p>
             <table class="scoreboardtables" id="TeamScoreboard"></table>
-            <p class="sectiontitle">Player</p>
+            <p class="pagetitle">Player Leaderboard</p>
             <table class="scoreboardtables" id="PlayerScoreboard"></table>
 
 
@@ -1017,35 +1016,37 @@
                         }
                     }
                 });
+        }
     </script>
     <script>
-        window.onload = () => {
-            var teamtable = document.getElementById("PlayerScoreboard");
+            window.onload = () => {
+                var teamtable = document.getElementById("PlayerScoreboard");
 
 
 
-            fetch("PlayerScoreboard.csv")
-                .then(res => res.text())
-                .then(csv => {
-                    console.log(csv);
-                    //clear table
-                    teamtable.innerHTML = "";
+                fetch("PlayerScoreboard.csv")
+                    .then(res => res.text())
+                    .then(csv => {
+                        console.log(csv);
+                        //clear table
+                        teamtable.innerHTML = "";
 
-                    //split rows
-                    let rows = csv.split("/r/n");
+                        //split rows
+                        let rows = csv.split("/r/n");
 
-                    //loop through rows and split columns
-                    for (let row of rows) {
-                        let cols = row.match(/(?:\"([^\"]*(?:\"\"[^\"]*)*)\")|([^\",]+)/g);
-                        if (cols != null) {
-                            let tr = table.insertRow();
-                            for (let col of cols) {
-                                let td = tr.insertCell();
-                                td.innerHTML = col.replace(/(^"|"$)/g, "");
+                        //loop through rows and split columns
+                        for (let row of rows) {
+                            let cols = row.match(/(?:\"([^\"]*(?:\"\"[^\"]*)*)\")|([^\",]+)/g);
+                            if (cols != null) {
+                                let tr = table.insertRow();
+                                for (let col of cols) {
+                                    let td = tr.insertCell();
+                                    td.innerHTML = col.replace(/(^"|"$)/g, "");
+                                }
                             }
                         }
-                    }
-                });
+                    });
+            }
     </script>
     <script>
         //tab switching
