@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-
-<!-- (A) JS -->
 <head>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -358,6 +356,21 @@
             grid-template-columns: 140px 70px 70px 70px 70px 70px 80px;
             grid-template-areas: "r1 r2 r3 r4 r5 s2 r6";
             width: fit-content;
+        }
+        #TeamScoreboard tr {
+            border-radius: 10px 10px 10px 10px;
+            border: 1px solid #555;
+            margin-bottom: -1px;
+            height: auto;
+            margin-right: auto;
+            margin-left: auto;
+            width: fit-content;
+            position: relative;
+            background-color: #f3f3f3;
+            text-align: center;
+        }
+        #TeamScoreboard td {
+
         }
 
         .tableheader {
@@ -930,9 +943,9 @@
 
 
             <!-- (B) GENERATE HTML TABLE HERE -->
-            <table id="TeamScoreboard"></table>
 
             <p class="pagetitle">Leaderboards</p>
+            <table id="TeamScoreboard"></table>
             <div class="container-fluid col-lg-12 eventtable">
                 <div class="r1 tableheader">
                     Team
