@@ -1007,6 +1007,13 @@
                     for (let row of rows) {
                         let cols = row.match(/(?:\"([^\"]*(?:\"\"[^\"]*)*)\")|([^\",]+)/g);
                         if (cols != null) {
+                            for (let row of CSV.parse(csv)) {
+                                let tr = teamtable.insertRow();
+                                for (let col of row) {
+                                    let td = tr.insertCell();
+                                    td.innerHTML = col;
+                                }
+                            }
                             let tr = teamtable.insertRow();
                             for (let col of cols) {
                                 let td = tr.insertCell();
@@ -1033,6 +1040,13 @@
                     for (let row of rows) {
                         let cols = row.match(/(?:\"([^\"]*(?:\"\"[^\"]*)*)\")|([^\",]+)/g);
                         if (cols != null) {
+                            for (let row of CSV.parse(csv)) {
+                                let tr = teamtable.insertRow();
+                                for (let col of row) {
+                                    let td = tr.insertCell();
+                                    td.innerHTML = col;
+                                }
+                            }
                             let tr = playertable.insertRow();
                             for (let col of cols) {
                                 let td = tr.insertCell();
