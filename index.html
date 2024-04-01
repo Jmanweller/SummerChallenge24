@@ -1043,7 +1043,7 @@
                                 if (tablerow == 1) {
                                     tablerow = 0;
                                     playertable.createTHead();
-                                    let thead = playertable.insertRow(0);
+                                    let thead = playertable.insertRow();
                                     for (let col of row) {
                                         let th = thead.insertCell();
                                         th.innerHTML = col;
