@@ -558,6 +558,10 @@
             float: left;
         }
 
+        .nonewline {
+            display: inline;
+        }
+
         .placementtablerow {
             border-radius: 10px 10px 10px 10px;
             border: 1px solid #555;
@@ -790,10 +794,10 @@
             <div class="infoholder container">
                 <div class="row">
                     <div class="infoitem col-sm-3">
-                        <strong class="infotitle">Next Event</strong>Discord Challenge
+                        <strong class="infotitle">Next Event</strong>Discord Trivia
                     </div>
                     <div class="infoitem col-sm-3">
-                        <strong class="infotitle">DATE</strong> May 2nd 7:30pm
+                        <strong class="infotitle">DATE</strong> May 16th 7:30pm
                     </div>
                     <div class="infoitem col-sm-3">
                         <strong class="infotitle">LOCATION</strong> Discord
@@ -802,7 +806,7 @@
                         <strong class="infotitle">COUNTDOWN</strong> <p id="daysleft"></p>
                         <script>
                             var d = new Date();
-                            var b = new Date('05/02/2024');
+                            var b = new Date('05/16/2024');
                             document.getElementById("daysleft").innerHTML = Math.ceil((b - d) / (1000 * 60 * 60 * 24)) + " days";
                         </script>
                     </div>
@@ -823,10 +827,10 @@
         <div class="tabcontent container" id="Countries">
             <div class="pagetitle">Current Event</div>
             <div class="text-center sectionbackground">
-                <div class="sectiontitle">The next even is a surprise Discord challenge!</div>
+                <div class="sectiontitle">The next even is a Discord Trivia hosted by Wyatt!</div>
                 <p class="note schedulenote">
-                    This Thursday May 2nd from 7:30pm-9:00pm we will have 2 secret timed challenges, 20 and 40 minutes.<br />
-                    You will play as one big unit with your team, hop in discord to work together! You can hang out in person as well, the more players with a laptop or desktop with a keyboard/mouse the better!
+                    This Thursday May 16th from 7:30pm-9:00pm we will split into 2 (possibly 3) teams per team and answer trivia questions.<br />
+                    You are encouraged to hang out in person with any teammates as well, only one person will need internet access to watch the twitch and submit your answers!
                 </p>
             </div>
             <div class="">
@@ -985,16 +989,19 @@
         </div>
 
         <div class="tabcontent  container" id="DieCornhole">
-            <div class="pagetitle">Seal Beach Beer Die and Cornhole Tourney June 8th!</div>
+            <div class="pagetitle">Seal Beach Beer Die and Cornhole Tourney 1pm June 8th!</div>
             <p class="sectiontitle">Beer Die</p>
-            <p class="note schedulenote">There will be two double elimination brackets.<br />One with a $15 entry fee per player winners take all, and one with no entry fee. Both will count for challenge points!</p>
-            <a class="signup" href="https://forms.gle/PZk3aTwiSU3SSkoZA"> Beer Die Signup</a>
+            <p class="note schedulenote">There will be two separate double elimination brackets, both will count for challenge points!<br /><b>Money Bracket</b> has a $15 entry fee per player, winners take all, and is for more advanced players.<br /><b class="nonewline">Free Bracket</b> does not have an entry fee and it's encouraged as many people play as possible.</p>
+            <a class="signup" href="https://forms.gle/PZk3aTwiSU3SSkoZA"> Beer Die Signups</a>
             <p class="sectiontitle">Cornhole</p>
             <p class="note schedulenote padup">There will be one double elimination bracket with a $5 entry fee per player, winners take all!</p>
             <a class="signup" href="https://forms.gle/Z766QiEV6JT3pC8n7"> Cornhole Signup</a>
 
+            <p class="sectiontitle">Teams</p>
+            <p class="note schedulenote">You can play with anyone, whether it's someone on your team, someone you want to bring, or someone on antoher team! If you play with someone from another team your challenge points will be split and shared across both teams. You can also play with a different teammate in each event if you like!</p>
+
             <p class="sectiontitle">Location and parking</p>
-            <p class="note schedulenote">Seal Beach near the volleyball courts. I'll add more specific location and parking instructions closer to the tourney</p>
+            <p class="note schedulenote">Seal Beach near the volleyball courts. I'll add more specific location and parking instructions closer to the tourney. I suggest aiming to be here closer to 12 to have plenty of time to find parking and settle in.</p>
             <p class="sectiontitle">BYOE</p>
             <p class="note schedulenote">Bring your own everything! Food/snacks/drinks/chairs/etc, It is not legal to drink on seal beach and we're not sure how strict they are, so if you decide to bring anything keep it discrete and it's on you.<b>DO NOT BRING GLASS!</b></p>
 
