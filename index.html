@@ -794,19 +794,19 @@
             <div class="infoholder container">
                 <div class="row">
                     <div class="infoitem col-sm-3">
-                        <strong class="infotitle">Next Event</strong>Discord Trivia
+                        <strong class="infotitle">Next Event</strong>Beach Day
                     </div>
                     <div class="infoitem col-sm-3">
-                        <strong class="infotitle">DATE</strong> May 16th 7:30pm
+                        <strong class="infotitle">DATE</strong>June 8th 1:00pm
                     </div>
                     <div class="infoitem col-sm-3">
-                        <strong class="infotitle">LOCATION</strong> Discord
+                        <strong class="infotitle">LOCATION</strong>Seal Beach
                     </div>
                     <div class="infoitem col-sm-3">
                         <strong class="infotitle">COUNTDOWN</strong> <p id="daysleft"></p>
                         <script>
                             var d = new Date();
-                            var b = new Date('05/16/2024');
+                            var b = new Date('06/08/2024');
                             document.getElementById("daysleft").innerHTML = Math.ceil((b - d) / (1000 * 60 * 60 * 24)) + " days";
                         </script>
                     </div>
@@ -819,6 +819,7 @@
                     <button class="tablinks col-sm-2" id="defaultOpen" onclick="openSection(event, 'Countries')">Teams</button>
                     <button class="tablinks col-sm-2" onclick="openSection(event, 'Leaderboard')">Leaderboard</button>
                     <button class="tablinks col-sm-2" onclick="openSection(event, 'DieCornhole')">Beach Day</button>
+                    <button class="tablinks col-sm-2" onclick="openSection(event, 'Events')">Event Calendar</button>
                     <button class="tablinks col-sm-2" onclick="openSection(event, 'Schedule')">Info</button>
                 </div>
             </div>
@@ -1009,43 +1010,101 @@
             <p class="note schedulenote">Bring your own everything! Food/snacks/drinks/chairs/etc, It is not legal to drink on seal beach and we're not sure how strict they are, so if you decide to bring anything keep it discrete and it's on you.<b>DO NOT BRING GLASS!</b></p>
 
         </div>
-        </div>
+    </div>
 
-        <div class="tabcontent container" id="Schedule">
-            <div class="pagetitle">Welcome to Jer's Great Summer Challenge!</div>
-            <p class="sectiontitle">Teams</p>
-            <p class="note schedulenote">You have been split into teams based mostly on how I know you, and we will compete all summer long to determine the best team. Team sizes are generally flexible and not everyone needs to play in every event, but the more members that join the higher your team's chances of scoring points will be.</p>
-            <p class="sectiontitle">Events</p>
-            <p class="note schedulenote padup">Each event will have it's own rules and entry fee if applicable. They will include everything from online challenges like March Madness brackets to beer pong, trivia nights and more. For team events you should play with a team member whenever possible but it's ok to play cross teams if you need to, your points just won't count in full towards the greater challenge.</p>
-            <p class="sectiontitle">Captains</p>
-            <p class="note schedulenote">The first two players on each team are designated captains. There aren't any real roles involved, just drive participation in the events for your teams!</p>
-            <p class="sectiontitle">Me</p>
-            <p class="note schedulenote">I (Jer) will only compete in events where it makes sense, for example if I'm hosting trivia or mystery events I won't be playing in them, but I will for events like beer pong and March Madness.</p>
+    <div class="tabcontent  container" id="Events">
 
-        </div>
+        <div class="pagetitle">Event Table</div>
+        <table class="scoreboardtables sortable" id="Eventtable">
+            <tr><td>Event</td><td>Start Date</td><td>Weight</td><td>Scoring</td><td>Champion</td></tr>
+            <tr><td>March Madness</td><td>March 21st</td><td>Major</td><td>~200</td><td>Sruthi (East)</td></tr>
+            <tr><td>MLB Pickem</td><td>March 28th</td><td>Minor</td><td>~50</td><td>Bard (South)</td></tr>
+            <tr><td>Challenge Night 1</td><td>May 2nd</td><td>Minor</td><td>~50</td><td>West</td></tr>
+            <tr><td>Trivia Night 1</td><td>May 16th</td><td>Minor</td><td>~50</td><td>Eastie Boys (East)</td></tr>
+            <tr><td>NBA Finals Pickem</td><td>June 5th</td><td>Minor</td><td>~50</td><td>TBD</td></tr>
+            <tr><td>Beach Day</td><td>June 8th</td><td>Super Major</td><td>~500</td><td>TBD</td></tr>
+            <tr><td>Challenge Night 2</td><td>TBD</td><td>Minor</td><td>~50</td><td>TBD</td></tr>
+            <tr><td>Trivia Night 2</td><td>TBD</td><td>Minor</td><td>~50</td><td>TBD</td></tr>
+            <tr><td>Beer Olympics</td><td>TBD</td><td>Super Major</td><td>~500</td><td>TBD</td></tr>
+        </table>
 
-        <script src="csv.min.js"></script>
-        <script>
-            window.onload = () => {
-                //teamtable
-                var teamtable = document.getElementById("TeamScoreboard");
+    </div>
 
-                fetch("TeamScoreboard.csv")
-                    .then(res => res.text())
-                    .then(csv => {
-                        console.log(csv);
-                        //clear table
-                        teamtable.innerHTML = "";
+    <div class="tabcontent container" id="Schedule">
+        <div class="pagetitle">Welcome to Jer's Great Summer Challenge!</div>
+        <p class="sectiontitle">Teams</p>
+        <p class="note schedulenote">You have been split into teams based mostly on how I know you, and we will compete all summer long to determine the best team. Team sizes are generally flexible and not everyone needs to play in every event, but the more members that join the higher your team's chances of scoring points will be.</p>
+        <p class="sectiontitle">Events</p>
+        <p class="note schedulenote padup">Each event will have it's own rules and entry fee if applicable. They will include everything from online challenges like March Madness brackets to beer pong, trivia nights and more. For team events you should play with a team member whenever possible but it's ok to play cross teams if you need to, your points just won't count in full towards the greater challenge.</p>
+        <p class="sectiontitle">Captains</p>
+        <p class="note schedulenote">The first two players on each team are designated captains. There aren't any real roles involved, just drive participation in the events for your teams!</p>
+        <p class="sectiontitle">Me</p>
+        <p class="note schedulenote">I (Jer) will only compete in events where it makes sense, for example if I'm hosting trivia or mystery events I won't be playing in them, but I will for events like beer pong and March Madness.</p>
 
-                        //split rows
-                        let rows = csv.split("/r/n");
+    </div>
 
-                        //loop through rows and split columns
-                        for (let row of rows) {
-                            let cols = row.match(/(?:\"([^\"]*(?:\"\"[^\"]*)*)\")|([^\",]+)/g);
-                            if (cols != null) {
-                                for (let row of CSV.parse(csv)) {
-                                    let tr = teamtable.insertRow();
+    <script src="csv.min.js"></script>
+    <script>
+        window.onload = () => {
+            //teamtable
+            var teamtable = document.getElementById("TeamScoreboard");
+
+            fetch("TeamScoreboard.csv")
+                .then(res => res.text())
+                .then(csv => {
+                    console.log(csv);
+                    //clear table
+                    teamtable.innerHTML = "";
+
+                    //split rows
+                    let rows = csv.split("/r/n");
+
+                    //loop through rows and split columns
+                    for (let row of rows) {
+                        let cols = row.match(/(?:\"([^\"]*(?:\"\"[^\"]*)*)\")|([^\",]+)/g);
+                        if (cols != null) {
+                            for (let row of CSV.parse(csv)) {
+                                let tr = teamtable.insertRow();
+                                for (let col of row) {
+                                    let td = tr.insertCell();
+                                    td.innerHTML = col;
+                                }
+                            }
+                        }
+                    }
+                });
+
+            //playertable
+            var playertable = document.getElementById("PlayerScoreboard");
+
+            fetch("PlayerScoreboard.csv")
+                .then(res => res.text())
+                .then(csv => {
+                    console.log(csv);
+                    //clear table
+                    playertable.innerHTML = "";
+
+                    //split rows
+                    let rows = csv.split("/r/n");
+
+                    //loop through rows and split columns
+                    for (let row of rows) {
+                        let cols = row.match(/(?:\"([^\"]*(?:\"\"[^\"]*)*)\")|([^\",]+)/g);
+                        if (cols != null) {
+                            var tablerow = 1;
+                            for (let row of CSV.parse(csv)) {
+                                if (tablerow == 1) {
+                                    tablerow = 0;
+                                    playertable.createTHead();
+                                    let thead = playertable.insertRow();
+                                    for (let col of row) {
+                                        let th = thead.insertCell();
+                                        th.innerHTML = col;
+                                    }
+
+                                }
+                                else {
+                                    let tr = playertable.insertRow();
                                     for (let col of row) {
                                         let td = tr.insertCell();
                                         td.innerHTML = col;
@@ -1053,76 +1112,36 @@
                                 }
                             }
                         }
-                    });
-
-                //playertable
-                var playertable = document.getElementById("PlayerScoreboard");
-
-                fetch("PlayerScoreboard.csv")
-                    .then(res => res.text())
-                    .then(csv => {
-                        console.log(csv);
-                        //clear table
-                        playertable.innerHTML = "";
-
-                        //split rows
-                        let rows = csv.split("/r/n");
-
-                        //loop through rows and split columns
-                        for (let row of rows) {
-                            let cols = row.match(/(?:\"([^\"]*(?:\"\"[^\"]*)*)\")|([^\",]+)/g);
-                            if (cols != null) {
-                                var tablerow = 1;
-                                for (let row of CSV.parse(csv)) {
-                                    if (tablerow == 1) {
-                                        tablerow = 0;
-                                        playertable.createTHead();
-                                        let thead = playertable.insertRow();
-                                        for (let col of row) {
-                                            let th = thead.insertCell();
-                                            th.innerHTML = col;
-                                        }
-
-                                    }
-                                    else {
-                                        let tr = playertable.insertRow();
-                                        for (let col of row) {
-                                            let td = tr.insertCell();
-                                            td.innerHTML = col;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    });
-            }
-        </script>
-        <script>
-            $(document).ready(function () {
-                $('#TeamScoreboard').sortable({
+                    }
                 });
-                $('#PlayerScoreboard').sortable({
-                });
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#TeamScoreboard').sortable({
             });
-        </script>
+            $('#PlayerScoreboard').sortable({
+            });
+        });
+    </script>
 
-        <script>
-            //tab switching
-            function openSection(evt, tabName) {
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-                document.getElementById(tabName).style.display = "block";
-                evt.currentTarget.className += " active";
+    <script>
+        //tab switching
+        function openSection(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
             }
-            document.getElementById("defaultOpen").click();
-        </script>
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
 
 
 </body>
