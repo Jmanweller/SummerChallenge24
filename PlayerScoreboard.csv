@@ -1,63 +1,65 @@
-Name,Team,March<br>Madness,MLB<br>Pickem,Challenge<br>Night #1,Trivia<br>Night #1,Beach<br>Day,NBA<br>Pickem,Total
-Kris,Ring,39,27,22,25,75,13,201
-Sean,West,42,27,26,20,60,10,185
-Omid,West,28,27,26,20,65,17,183
-Lexa,Ring,22,21,22,25,75,13,178
-Kyle,North,36,24,22,20,35,33,171
-Matt F,South,23,30,0,19,50,40,162
-Bard,South,29,36,23,19,30,19,157
-Jen W,West,36,0,26,20,60,4,146
-Rob,East,39,39,0,27,25,16,146
-Alex,West,36,0,26,24,35,17,138
-Gaivalee,West,25,21,26,24,30,10,136
-Wyatt,East,32,30,22,0,20,26,130
-Sru,East,43,27,0,0,20,31,121
-Phil,North,36,18,22,0,45,0,121
-Alexa,North,25,36,0,0,30,27,118
-Tyler L,South,25,30,23,19,20,0,118
-Jer,West,20,30,0,20,30,17,117
-Elisabeth,West,11,24,0,0,65,17,117
-Sreeja,East,41,27,0,0,20,27,115
-Serg,Ring,23,27,22,25,0,17,113
-Brit,East,27,0,22,27,20,14,111
-Dalo,South,26,24,23,20,0,10,103
-James,South,37,18,23,20,0,0,98
-Ben,North,28,27,0,0,40,0,95
-Eric,West,34,0,0,0,60,0,94
-Celeste,Ring,28,33,0,0,20,11,93
-Jon,Ring,36,33,22,0,0,0,91
-Avalon,West,29,18,0,24,20,0,90
-Kylee,West,25,0,26,24,15,0,90
-Cristina,East,20,0,22,27,20,0,89
-Amy,North,0,0,22,20,40,0,83
-Anna,South,12,27,23,20,0,0,82
-Krishna,East,33,0,0,0,20,27,80
-Precious,Ring,23,27,0,0,20,9,78
-Daisy,West,38,0,0,24,10,0,71
-Jeremy,Ring,23,21,0,0,0,27,71
-Chelsea,South,0,27,23,19,0,0,70
-Eddie,East,0,27,22,0,20,0,69
-Daniel G,North,39,0,0,0,30,0,69
-Broner,North,23,0,0,0,35,0,58
-Nick,East,33,0,0,0,20,0,53
-Clay,South,21,0,0,0,30,0,51
-Bobby,Ring,0,0,22,25,0,0,47
-Travis,East,0,0,0,0,35,10,45
-Ari,North,29,15,0,0,0,0,44
-Danny,East,35,9,0,0,0,0,44
-Mommymom,South,0,0,23,20,0,0,43
-Sam,East,0,0,0,19,20,0,39
-Nack,South,0,36,0,0,0,0,36
-Daniel K,North,36,0,0,0,0,0,36
-Salaar,North,0,15,0,20,0,0,35
-Ryan R,West,0,0,0,24,10,0,34
-Zach,East,0,0,0,0,30,0,30
-Evan,South,27,0,0,0,0,0,27
-Chance,West,0,0,26,0,0,0,26
-Hayden,North,0,0,0,0,25,0,25
-Matt S,Ring,24,0,0,0,0,0,24
-Uly,West,22,0,0,0,0,0,22
-Devin,North,0,21,0,0,0,0,21
-Kayla,East,0,0,0,0,20,0,20
-Dozz,South,20,0,0,0,0,0,20
-Rome,West,0,0,0,0,10,0,10
+Name,Team,March<br>Madness,MLB<br>Pickem,Challenge<br>Night #1,Trivia<br>Night #1,Beach<br>Day,NBA<br>Pickem,Trivia<br>Night #2,Total
+Kris,Ring,45,21,15,17,75,10,0,182
+Sean,West,48,21,18,16,60,8,0,171
+Omid,West,32,21,18,16,65,13,0,165
+Kyle,North,42,18,15,14,35,25,12,161
+Lexa,Ring,26,16,15,17,75,10,0,158
+Rob,East,46,32,0,18,25,12,18,151
+Bard,South,34,28,16,13,30,14,15,150
+Farah,South,27,23,0,13,50,32,0,145
+Jen W,West,42,0,18,16,60,3,0,139
+Sru,East,55,21,0,0,20,24,18,138
+Wyatt,East,37,23,15,0,20,19,18,133
+Gaivalee,West,29,16,18,16,30,8,13,130
+Sreeja,East,47,21,0,0,20,20,18,127
+Alex,West,41,0,18,16,35,13,0,123
+Phil,North,42,14,15,0,45,0,0,115
+Jon,Ring,42,25,15,0,0,15,16,112
+Elisabeth,West,13,18,0,0,65,13,0,109
+Alexa,North,29,28,0,0,30,20,0,107
+Jer,West,23,23,0,16,30,13,0,105
+Tyler L,South,29,23,16,13,20,0,0,101
+James,South,42,14,16,13,0,0,15,100
+Dalo,South,30,18,16,13,0,8,15,100
+Eric,West,39,0,0,0,60,0,0,99
+Avalon,West,33,14,0,16,20,0,13,96
+Brit,East,31,0,15,18,20,11,0,95
+Cristina,East,23,0,15,18,20,0,18,94
+Ben,North,32,21,0,0,40,0,0,93
+Serg,Ring,26,21,15,17,0,13,0,91
+Kylee,West,29,0,18,16,15,0,13,91
+Gandolf,North,45,0,0,0,30,0,12,87
+Celeste,Ring,33,25,0,0,20,9,0,87
+Krishna,East,38,0,0,0,20,20,0,78
+Nick,East,39,0,0,0,20,0,18,77
+Eddie,East,0,21,15,0,20,0,18,74
+Precious,Ring,26,21,0,0,20,6,0,73
+Daisy,West,44,0,0,16,10,0,0,69
+Amy,North,0,0,15,14,40,0,0,68
+Chelsea,South,0,21,16,13,0,0,15,65
+Anna,South,14,21,16,13,0,0,0,64
+Jeremy,Ring,26,16,0,0,0,20,0,63
+Broner,North,27,0,0,0,35,0,0,62
+Travis,East,0,0,0,0,35,8,18,61
+Clay,South,24,0,0,0,30,0,0,54
+Bobby,Ring,0,0,15,18,0,0,18,52
+Danny,East,41,7,0,0,0,0,0,48
+Ari,North,34,12,0,0,0,0,0,46
+Daniel K,North,42,0,0,0,0,0,0,42
+Sam,East,0,0,0,18,20,0,0,38
+Kayla,East,0,0,0,0,20,0,18,38
+Dozz,South,23,0,0,0,0,0,15,38
+Evan,South,31,0,0,0,0,0,0,31
+Zach,East,0,0,0,0,30,0,0,30
+Mommymom,South,0,0,16,13,0,0,0,29
+Nack,South,0,28,0,0,0,0,0,28
+Matt S,Ring,27,0,0,0,0,0,0,27
+Ryan R,West,0,0,0,16,10,0,0,26
+Salaar,North,0,12,0,14,0,0,0,25
+Hayden,North,0,0,0,0,25,0,0,25
+Uly,West,25,0,0,0,0,0,0,25
+Rome,West,0,0,0,0,10,0,13,23
+Chance,West,0,0,18,0,0,0,0,18
+Devin,North,0,16,0,0,0,0,0,16
+Christopher,Ring,0,0,0,0,0,0,16,16
+Daniel R,Ring,0,0,0,0,0,14,0,14
